@@ -1,0 +1,12 @@
+/Users/patricksudol/Code/WarCardGame/bin/Debug/netcoreapp3.1/WarCardGame.deps.json
+/Users/patricksudol/Code/WarCardGame/bin/Debug/netcoreapp3.1/WarCardGame.runtimeconfig.json
+/Users/patricksudol/Code/WarCardGame/bin/Debug/netcoreapp3.1/WarCardGame.runtimeconfig.dev.json
+/Users/patricksudol/Code/WarCardGame/bin/Debug/netcoreapp3.1/WarCardGame.dll
+/Users/patricksudol/Code/WarCardGame/bin/Debug/netcoreapp3.1/WarCardGame.pdb
+/Users/patricksudol/Code/WarCardGame/obj/Debug/netcoreapp3.1/WarCardGame.csprojAssemblyReference.cache
+/Users/patricksudol/Code/WarCardGame/obj/Debug/netcoreapp3.1/WarCardGame.AssemblyInfoInputs.cache
+/Users/patricksudol/Code/WarCardGame/obj/Debug/netcoreapp3.1/WarCardGame.AssemblyInfo.cs
+/Users/patricksudol/Code/WarCardGame/obj/Debug/netcoreapp3.1/WarCardGame.csproj.CoreCompileInputs.cache
+/Users/patricksudol/Code/WarCardGame/obj/Debug/netcoreapp3.1/WarCardGame.dll
+/Users/patricksudol/Code/WarCardGame/obj/Debug/netcoreapp3.1/WarCardGame.pdb
+/Users/patricksudol/Code/WarCardGame/obj/Debug/netcoreapp3.1/WarCardGame.genruntimeconfig.cache
