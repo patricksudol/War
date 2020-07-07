@@ -10,8 +10,15 @@ and the fourth card face up. Whoever has the higher card wins all the cards deal
 5. The game is over when a player runs out of cards or does not have enough to go to "War".
 
 ## Installation
-Git clone the following Github repository:
+1. Git clone the following Github repository:
 ```Bash
-test
+git@github.com:patricksudol/War.git
 ```
+2. Install .NET Core (Developed on 3.1 but should work on older versions).
+```Bash
 https://dotnet.microsoft.com/download
+```
+3. Run the command:
+```Bash
+dotnet run
+```
