@@ -26,13 +26,19 @@ namespace WarCardGame.models
             Console.WriteLine("Hit enter to begin the match.");
             while (!MatchOver)
                 Draw();
-            Console.WriteLine("The game is over");
+            Console.WriteLine("\nThe game is over");
             var winner = UserCards.Count > ComputerCards.Count ? "You have" : "The computer has";
             Console.WriteLine($"{winner} won the game");
         }
         private void Draw()
         {
             // Console.Read();
+            if (UserCards.Count < 1 || ComputerCards.Count < 1)
+            {
+                MatchOver = true;
+                return;
+            }
+
             Console.WriteLine($"\nTurn: {Turn}");
             Turn++;
             Console.WriteLine($"Your card count: {UserCards.Count}. Computer's card count: {ComputerCards.Count}.");
@@ -47,9 +53,8 @@ namespace WarCardGame.models
 
             DrawPile.AddRange(new List<Card>(){ userCard, computerCard });
             Console.WriteLine($"You have drawn the {cardInfo(userCard)}. The computer has drawn {cardInfo(computerCard)}.");
-            if (UserCards.Count < 1 || ComputerCards.Count < 1)
-                MatchOver = true;
-            else if (userCard.Value > computerCard.Value)
+
+            if (userCard.Value > computerCard.Value)
             {
                 Console.WriteLine("You have won!");
                 awardDrawPile(UserCards);
@@ -70,6 +75,7 @@ namespace WarCardGame.models
                 popCard(3, UserCards);
                 popCard(3, ComputerCards);
             }
+
 
             void popCard(int numberOfCards, List<Card> cardPile)
             {
