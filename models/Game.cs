@@ -64,14 +64,14 @@ namespace WarCardGame.models
                 Console.WriteLine("The computer has won.");
                 awardDrawPile(ComputerCards);
             }
-            else if (UserCards.Count < 4 || ComputerCards.Count < 4)
-            {                
-                Console.WriteLine("Draw!");
-                MatchOver = true;
-            }
             else
             {
                 Console.WriteLine("Draw!");
+                if (UserCards.Count < 4 || ComputerCards.Count < 4)
+                {
+                    MatchOver = true;
+                    return;
+                }
                 popCard(3, UserCards);
                 popCard(3, ComputerCards);
             }
