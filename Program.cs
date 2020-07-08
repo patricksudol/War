@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using WarCardGame.models;
 
 namespace WarCardGame
@@ -9,7 +7,9 @@ namespace WarCardGame
     {
         static void Main(string[] args)
         {
-            var game = new Game();
+            Console.WriteLine("Type 'Yes' if you wish to simulate the game.");
+            var simulateResponse = Console.ReadLine().ToLower();
+            var game = new Game(true ? simulateResponse == "yes" : false);
             game.Start();
         }
     }

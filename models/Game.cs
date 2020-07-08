@@ -5,12 +5,13 @@ namespace WarCardGame.models
 {
     public class Game
     {
-        public Game()
+        public Game(bool simulation)
         {
             MatchOver = false;
             CardDeck = new CardDeck();
             DrawPile = new List<Card>();
             Turn = 1;
+            Simulation = simulation;
         }
 
         public List<Card> UserCards { get; set; }
@@ -19,6 +20,7 @@ namespace WarCardGame.models
         private CardDeck CardDeck { get; set; }
         private List<Card> DrawPile { get; set; }
         private int Turn { get; set; }
+        private bool Simulation { get; set; }
         
         public void Start()
         {
@@ -32,7 +34,8 @@ namespace WarCardGame.models
         }
         private void Draw()
         {
-            // Console.Read();
+            if (!Simulation)
+                Console.Read();
             if (UserCards.Count < 1 || ComputerCards.Count < 1)
             {
                 MatchOver = true;
