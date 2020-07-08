@@ -46,15 +46,12 @@ namespace WarCardGame.models
             Turn++;
             Console.WriteLine($"Your card count: {UserCards.Count}. Computer's card count: {ComputerCards.Count}.");
             
-            var userCard = UserCards[0];
-            UserCards.RemoveAt(0);
-
-            var computerCard = ComputerCards[0];
-            ComputerCards.RemoveAt(0);
+            var userCard = popCard(1, UserCards)[0];
+            var computerCard = popCard(1, ComputerCards)[0];
             
             Func<Card, string> cardInfo = (card) => $"{card.Name} of {card.Suit}"; 
 
-            DrawPile.AddRange(new List<Card>(){ userCard, computerCard });
+            // DrawPile.AddRange(new List<Card>(){ userCard, computerCard });
             Console.WriteLine($"You have drawn the {cardInfo(userCard)}. The computer has drawn {cardInfo(computerCard)}.");
 
             if (userCard.Value > computerCard.Value)
@@ -80,13 +77,16 @@ namespace WarCardGame.models
             }
 
 
-            void popCard(int numberOfCards, List<Card> cardPile)
+            List<Card> popCard(int numberOfCards, List<Card> cardPile)
             {
+                var poppedCards = new List<Card>();
                 for(var x = 0; x < numberOfCards; x++)
                 {
                     DrawPile.Add(cardPile[0]);
+                    poppedCards.Add(cardPile[0]);
                     cardPile.RemoveAt(0);
                 }
+                return poppedCards;
             }
 
             void awardDrawPile(List<Card> playerCards)
