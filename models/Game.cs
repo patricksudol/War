@@ -46,8 +46,8 @@ namespace WarCardGame.models
             Turn++;
             Console.WriteLine($"Your card count: {UserCards.Count}. Computer's card count: {ComputerCards.Count}.");
             
-            var userCard = popCard(1, UserCards)[0];
-            var computerCard = popCard(1, ComputerCards)[0];
+            var userCard = popCards(1, UserCards)[0];
+            var computerCard = popCards(1, ComputerCards)[0];
             
             Func<Card, string> cardInfo = (card) => $"{card.Name} of {card.Suit}"; 
             Console.WriteLine($"You have drawn the {cardInfo(userCard)}. The computer has drawn {cardInfo(computerCard)}.");
@@ -70,12 +70,12 @@ namespace WarCardGame.models
                     MatchOver = true;
                     return;
                 }
-                popCard(3, UserCards);
-                popCard(3, ComputerCards);
+                popCards(3, UserCards);
+                popCards(3, ComputerCards);
             }
 
 
-            List<Card> popCard(int numberOfCards, List<Card> cardPile)
+            List<Card> popCards(int numberOfCards, List<Card> cardPile)
             {
                 var poppedCards = new List<Card>();
                 for(var x = 0; x < numberOfCards; x++)
