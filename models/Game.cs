@@ -66,7 +66,7 @@ namespace WarCardGame.models
             }
             else
             {
-                Console.WriteLine("Draw!");
+                Console.WriteLine("War!");
                 if (UserCards.Count < 4 || ComputerCards.Count < 4)
                 {
                     MatchOver = true;
