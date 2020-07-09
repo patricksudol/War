@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using WarCardGame.helpers;
 
 namespace WarCardGame.models
 {
@@ -89,6 +90,7 @@ namespace WarCardGame.models
 
             void awardDrawPile(List<Card> playerCards)
             {
+                DrawPile.ShuffleList();
                 playerCards.AddRange(DrawPile);
                 DrawPile.Clear();
             }
