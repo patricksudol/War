@@ -12,12 +12,10 @@ and the fourth card face up. Whoever has the higher card wins all the cards deal
 ## Installation
 1. Git clone the following Github repository:
 ```Bash
-git@github.com:patricksudol/War.git
+git clone git@github.com:patricksudol/War.git
 ```
 2. Install .NET Core (Developed on 3.1 but should work on older versions).
-```Bash
 https://dotnet.microsoft.com/download
-```
 3. Run the command:
 ```Bash
 dotnet run

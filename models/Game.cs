@@ -50,7 +50,7 @@ namespace WarCardGame.models
             var computerCard = popCards(1, ComputerCards)[0];
             
             Func<Card, string> cardInfo = (card) => $"{card.Name} of {card.Suit}"; 
-            Console.WriteLine($"You have drawn the {cardInfo(userCard)}. The computer has drawn {cardInfo(computerCard)}.");
+            Console.WriteLine($"You have drawn the {cardInfo(userCard)}. The computer has drawn the {cardInfo(computerCard)}.");
 
             if (userCard.Value > computerCard.Value)
             {
